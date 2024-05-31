@@ -1,121 +1,78 @@
-INSERT INTO `MrPaper`.`livro` (`nome`, `preco`, `quantidade_estoque`, `quantidade_vendida`, `data`) VALUES
-('Moby Dick', 28.90, 110, 40, '1851-10-18'),
-('O Código Da Vinci', 25.90, 90, 35, '2003-03-18'),
-('O Alquimista', 20.90, 120, 45, '1988-01-01'),
-('O Diário de Anne Frank', 19.90, 100, 50, '1947-06-25'),
-('O Poder do Hábito', 22.90, 80, 30, '2012-02-28'),
-('O Hobbit', 23.90, 130, 55, '1937-09-21'),
-('A Sutil Arte de Ligar o F*da-se', 21.90, 95, 40, '2016-09-13'),
-('Game of Thrones: A Guerra dos Tronos', 31.90, 85, 35, '1996-08-06'),
-('Um Dia', 17.90, 110, 45, '2009-06-11'),
-('O Grande Gatsby', 24.90, 100, 50, '1925-04-10'),
-('Memórias Póstumas de Brás Cubas', 18.90, 120, 55, '1881-12-01'),
-('O Iluminado', 29.90, 90, 40, '1977-01-28'),
-('Cinquenta Tons de Cinza', 26.90, 110, 45, '2011-06-20'),
-('Maus', 19.90, 85, 35, '1986-01-01'),
-('Crepúsculo', 16.90, 130, 50, '2005-10-05'),
-('O Guia do Mochileiro das Galáxias', 19.90, 100, 40, '1979-10-12'),
-('Sapiens: Uma Breve História da Humanidade', 22.90, 120, 50, '2011-04-11'),
-('O Poderoso Chefão', 34.90, 110, 40, '1969-03-10'),
-('A Menina que Roubava Livros', 34.90, 110, 40, '2005-09-01'),
-('A Metamorfose', 19.90, 70, 25, '1915-10-15'),
-('A Arte da Guerra', 27.90, 120, 50, '5º século a.C.'),
-('A Cabana', 29.90, 90, 35, '2007-07-01'),
-('A Dança dos Dragões', 59.90, 80, 30, '2011-07-12'),
-('A Garota no Trem', 39.90, 100, 45, '2015-01-13'),
-('A Hospedeira', 32.90, 85, 35, '2008-05-06'),
-('A Mágica da Arrumação', 24.90, 150, 60, '2011-10-14'),
-('A Menina do Vale', 29.90, 130, 55, '2012-04-02'),
-('A Moreninha', 19.90, 95, 30, '1844-08-28'),
-('Harry Potter e o Enigma do Príncipe', 35.90, 120, 50, '2005-07-16'),
-('O Silmarillion', 42.90, 100, 30, '1977-09-15'),
-('O Nome do Vento', 38.90, 80, 45, '2007-03-27'),
-('As Crônicas de Gelo e Fogo: A Fúria dos Reis', 46.90, 90, 25, '1998-11-16'),
-('A Hora da Estrela', 28.90, 110, 35, '1977-10-11'),
-('A Insustentável Leveza do Ser', 33.90, 70, 20, '1984-09-20'),
-('A Bíblia Sagrada', 19.90, 150, 60, 'Século I a.C.'),
-('O Sol é para Todos', 26.90, 130, 55, '1960-07-11'),
-('Admirável Mundo Novo', 23.90, 95, 30, '1932-01-19'),
-('A Revolução dos Bichos', 19.90, 130, 40, '1945-08-17'),
-('O Pequeno Príncipe', 29.90, 110, 45, '1943-04-06'),
-('O Alquimista', 27.90, 100, 40, '1988-01-01'),
-('O Poder do Hábito', 24.90, 120, 50, '2012-02-28'),
-('O Hobbit', 26.90, 85, 35, '1937-09-21'),
-('A Sutil Arte de Ligar o F*da-se', 29.90, 110, 45, '2016-09-13'),
-('Game of Thrones: A Guerra dos Tronos', 39.90, 100, 40, '1996-08-06'),
-('Um Dia', 22.90, 130, 55, '2009-06-11'),
-('O Grande Gatsby', 29.90, 95, 35, '1925-04-10'),
-('Memórias Póstumas de Brás Cubas', 25.90, 120, 50, '1881-12-01'),
-('O Iluminado', 34.90, 90, 40, '1977-01-28'),
-('Cinquenta Tons de Cinza', 32.90, 110, 45, '2011-06-20'),
-('Maus', 24.90, 85, 35, '1986-01-01'),
-('Crepúsculo', 19.90, 130, 50, '2005-10-05'),
-('O Guia do Mochileiro das Galáxias', 22.90, 100, 40, '1979-10-12'),
-('Sapiens: Uma Breve História da Humanidade', 25.90, 120, 50, '2011-04-11'),
-('O Código Da Vinci', 27.90, 105, 45, '2003-03-18'),
-('O Senhor dos Anéis: A Sociedade do Anel', 33.90, 95, 35, '1954-07-29'),
-('O Pequeno Príncipe', 23.90, 115, 50, '1943-04-06'),
-('Cem Anos de Solidão', 37.90, 85, 25, '1967-05-30'),
-('Dom Quixote', 31.90, 105, 35, '1605-01-16'),
-('1984', 25.90, 65, 20, '1949-06-08'),
-('Orgulho e Preconceito', 23.90, 145, 60, '1813-01-28'),
-('A Revolução dos Bichos', 21.90, 135, 45, '1945-08-17'),
-('A Culpa É das Estrelas', 29.90, 90, 35, '2012-01-10'),
-('As Crônicas de Nárnia: O Leão, a Feiticeira e o Guarda-Roupa', 31.90, 80, 30, '1950-10-16'),
-('A Menina que Roubava Livros', 36.90, 105, 40, '2005-09-01'),
-('A Metamorfose', 21.90, 75, 25, '1915-10-15'),
-('A Arte da Guerra', 29.90, 115, 50, '5º século a.C.'),
-('A Cabana', 32.90, 85, 35, '2007-07-01'),
-('A Dança dos Dragões', 62.90, 75, 30, '2011-07-12'),
-('A Garota no Trem', 41.90, 95, 45, '2015-01-13'),
-('A Hospedeira', 34.90, 80, 35, '2008-05-06'),
-('A Mágica da Arrumação', 26.90, 140, 60, '2011-10-14'),
-('A Menina do Vale', 31.90, 120, 55, '2012-04-02'),
-('A Moreninha', 21.90, 105, 30, '1844-08-28'),
-('Harry Potter e o Enigma do Príncipe', 37.90, 115, 50, '2005-07-16'),
-('O Silmarillion', 44.90, 95, 30, '1977-09-15'),
-('O Nome do Vento', 40.90, 75, 45, '2007-03-27'),
-('As Crônicas de Gelo e Fogo: A Fúria dos Reis', 48.90, 85, 25, '1998-11-16'),
-('A Hora da Estrela', 30.90, 105, 35, '1977-10-11'),
-('A Insustentável Leveza do Ser', 35.90, 65, 20, '1984-09-20'),
-('A Bíblia Sagrada', 21.90, 155, 60, 'Século I a.C.'),
-('O Sol é para Todos', 28.90, 135, 55, '1960-07-11'),
-('Admirável Mundo Novo', 25.90, 100, 30, '1932-01-19'),
-('Dom Casmurro', 19.90, 125, 40, '1899-01-01'),
-('A Revolução dos Bichos', 23.90, 135, 40, '1945-08-17'),
-('O Pequeno Príncipe', 27.90, 105, 45, '1943-04-06'),
-('O Alquimista', 25.90, 95, 35, '1988-01-01'),
-('O Poder do Hábito', 22.90, 125, 45, '2012-02-28'),
-('O Hobbit', 28.90, 80, 35, '1937-09-21'),
-('A Sutil Arte de Ligar o F*da-se', 32.90, 105, 45, '2016-09-13'),
-('Game of Thrones: A Guerrados Tronos', 42.90, 90, 35, '1996-08-06'),
-('Um Dia', 27.90, 115, 50, '2009-06-11'),
-('O Grande Gatsby', 34.90, 105, 40, '1925-04-10'),
-('Memórias Póstumas de Brás Cubas', 28.90, 125, 55, '1881-12-01'),
-('O Iluminado', 39.90, 95, 45, '1977-01-28'),
-('Cinquenta Tons de Cinza', 36.90, 115, 50, '2011-06-20'),
-('Maus', 29.90, 90, 40, '1986-01-01'),
-('Crepúsculo', 24.90, 135, 55, '2005-10-05'),
-('O Guia do Mochileiro das Galáxias', 27.90, 105, 45, '1979-10-12'),
-('Sapiens: Uma Breve História da Humanidade', 30.90, 125, 55, '2011-04-11'),
-('Moby Dick', 32.90, 105, 45, '1851-10-18'),
-('O Nome do Vento', 45.90, 85, 35, '2007-03-27'),
-('As Crônicas de Gelo e Fogo: A Fúria dos Reis', 55.90, 95, 30, '1998-11-16'),
-('A Hora da Estrela', 36.90, 115, 40, '1977-10-11'),
-('A Insustentável Leveza do Ser', 39.90, 75, 25, '1984-09-20'),
-('Dom Casmurro', 24.90, 135, 40, '1899-01-01'),
-('O Pequeno Príncipe', 33.90, 95, 30, '1943-04-06'),
-('O Alquimista', 31.90, 110, 35, '1988-01-01'),
-('O Poder do Hábito', 29.90, 130, 45, '2012-02-28'),
-('O Hobbit', 34.90, 75, 30, '1937-09-21'),
-('A Sutil Arte de Ligar o F*da-se', 35.90, 115, 40, '2016-09-13'),
-('Game of Thrones: A Guerra dos Tronos', 45.90, 100, 35, '1996-08-06'),
-('Um Dia', 32.90, 120, 45, '2009-06-11'),
-('O Grande Gatsby', 39.90, 110, 50, '1925-04-10'),
-('Memórias Póstumas de Brás Cubas', 32.90, 135, 55, '1881-12-01'),
-('O Iluminado', 44.90, 100, 45, '1977-01-28'),
-('Cinquenta Tons de Cinza', 42.90, 120, 50, '2011-06-20'),
-('Maus', 34.90, 95, 45, '1986-01-01'),
-('Crepúsculo', 29.90, 140, 55, '2005-10-05'),
-('O Guia do Mochileiro das Galáxias', 32.90, 110, 45, '1979-10-12'),
-('Sapiens: Uma Breve História da Humanidade', 35.90, 130, 55, '2011-04-11');
+-- Tabela livro
+INSERT INTO `MrPaper`.`livro` (`nome`, `preco`, `quantidade_estoque`, `quantidade_vendida`, `data`)
+VALUES
+('Livro 1', 10.00, 10, 0, '2024-04-01'),
+('Livro 2', 20.00, 15, 0, '2024-04-01'),
+('Livro 3', 30.00, 20, 0, '2024-04-01'),
+('Livro 4', 40.00, 25, 0, '2024-04-01'),
+('Livro 5', 50.00, 30, 0, '2024-04-01'),
+('Livro 6', 60.00, 35, 0, '2024-04-01');
+
+-- Tabela cliente
+INSERT INTO `MrPaper`.`cliente` (`nome`, `login`, `senha`, `cpf`, `email`, `quantidade_compra`)
+VALUES
+('Cliente 1', 'login1', 'senha1', 123456789, 'cliente1@example.com', 0),
+('Cliente 2', 'login2', 'senha2', 987654321, 'cliente2@example.com', 0),
+('Cliente 3', 'login3', 'senha3', 912345678, 'cliente3@example.com', 0),
+('Cliente 4', 'login4', 'senha4', 876543219, 'cliente4@example.com', 0),
+('Cliente 5', 'login5', 'senha5', 765432198, 'cliente5@example.com', 0),
+('Cliente 6', 'login6', 'senha6', 654321987, 'cliente6@example.com', 0);
+
+-- Tabela avaliacao
+INSERT INTO `MrPaper`.`avaliacao` (`estrelas`, `data`, `avaliador`, `livro_id_livro`, `cliente_id_cliente`)
+VALUES
+(5, '2024-04-01', 'Avaliador 1', 1, 1),
+(4, '2024-04-01', 'Avaliador 2', 2, 2),
+(3, '2024-04-01', 'Avaliador 3', 3, 3),
+(2, '2024-04-01', 'Avaliador 4', 4, 4),
+(1, '2024-04-01', 'Avaliador 5', 5, 5),
+(5, '2024-04-01', 'Avaliador 6', 6, 6);
+
+-- Tabela editora
+INSERT INTO `MrPaper`.`editora` (`id_editora`, `data`, `nome`, `exemplares vendidos`)
+VALUES
+(1, '2024-04-01', 'Editora 1', 0),
+(2, '2024-04-01', 'Editora 2', 0),
+(3, '2024-04-01', 'Editora 3', 0),
+(4, '2024-04-01', 'Editora 4', 0),
+(5, '2024-04-01', 'Editora 5', 0),
+(6, '2024-04-01', 'Editora 6', 0);
+-- Tabela livro
+INSERT INTO `MrPaper`.`livro` (`nome`, `preco`, `quantidade_estoque`, `quantidade_vendida`, `data`)
+VALUES
+('Livro 1', 10.00, 10, 0, '2024-04-01'),
+('Livro 2', 20.00, 15, 0, '2024-04-01'),
+('Livro 3', 30.00, 20, 0, '2024-04-01'),
+('Livro 4', 40.00, 25, 0, '2024-04-01'),
+('Livro 5', 50.00, 30, 0, '2024-04-01'),
+('Livro 6', 60.00, 35, 0, '2024-04-01');
+
+-- Tabela cliente
+INSERT INTO `MrPaper`.`cliente` (`nome`, `login`, `senha`, `cpf`, `email`, `quantidade_compra`)
+VALUES
+('Cliente 1', 'login1', 'senha1', 123456789, 'cliente1@example.com', 0),
+('Cliente 2', 'login2', 'senha2', 987654321, 'cliente2@example.com', 0),
+('Cliente 3', 'login3', 'senha3', 912345678, 'cliente3@example.com', 0),
+('Cliente 4', 'login4', 'senha4', 876543219, 'cliente4@example.com', 0),
+('Cliente 5', 'login5', 'senha5', 765432198, 'cliente5@example.com', 0),
+('Cliente 6', 'login6', 'senha6', 654321987, 'cliente6@example.com', 0);
+
+-- Tabela avaliacao
+INSERT INTO `MrPaper`.`avaliacao` (`estrelas`, `data`, `avaliador`, `livro_id_livro`, `cliente_id_cliente`)
+VALUES
+(5, '2024-04-01', 'Avaliador 1', 1, 1),
+(4, '2024-04-01', 'Avaliador 2', 2, 2),
+(3, '2024-04-01', 'Avaliador 3', 3, 3),
+(2, '2024-04-01', 'Avaliador 4', 4, 4),
+(1, '2024-04-01', 'Avaliador 5', 5, 5),
+(5, '2024-04-01', 'Avaliador 6', 6, 6);
+
+-- Tabela editora
+INSERT INTO `MrPaper`.`editora` (`data`, `nome`, `exemplares vendidos`)
+VALUES
+('2024-04-01', 'Editora 1', 0),
+('2024-04-01', 'Editora 2', 0),
+('2024-04-01', 'Editora 3', 0),
+('2024-04-01', 'Editora 4', 0),
+('2024-04-01', 'Editora 5', 0),
+('2024-04-01', 'Editora 6', 0);

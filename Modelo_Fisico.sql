@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `MrPaper`.`cliente` (
   `nome` VARCHAR(50) NOT NULL,
   `login` VARCHAR(20) NOT NULL,
   `senha` VARCHAR(20) NOT NULL,
-  `cpf` TINYINT(11) UNSIGNED NOT NULL,
+  `cpf` INT(11) UNSIGNED NOT NULL,
   `email` VARCHAR(50) NOT NULL,
   `quantidade_compra` SMALLINT(6) NOT NULL,
   PRIMARY KEY (`id_cliente`))
@@ -53,10 +53,10 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `MrPaper`.`editora` (
-  `id_editora` INT(11) NOT NULL,
+  `id_editora` INT(11) NOT NULL AUTO_INCREMENT,
   `data` DATE NOT NULL,
   `nome` VARCHAR(50) NOT NULL,
-  `exemplares vendidos` INT(10) UNSIGNED NOT NULL,
+  `exemplares vendidos` INT(10),
   PRIMARY KEY (`id_editora`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
