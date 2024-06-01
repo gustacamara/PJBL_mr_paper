@@ -1,3 +1,5 @@
+-- PROCEDURE
+
 -- PROCEDURE ATUALIZAR VENDAS
 DELIMITER //
 CREATE PROCEDURE atualizar_vendas()
@@ -96,47 +98,65 @@ CALL atualizar_vendas();
 CALL gerar_relatorio_vendas_por_data('2024-04-01');
 CALL atualizar_dados_cliente(1, 'Nome 1', 'Login 1', 'Senha 1', 'Email 1');
 
-# FUNCTIONS 
-# Recebe o ID do livro como parâmetro e retorna o preço do livro.
-CREATE FUNCTION obter_preco_livro(livro_id INT)
+-- FUNCTION
+
+-- FUNCTION OBTER PRECO LIVRO
+DELIMITER //
+
+CREATE FUNCTION obter_preco_livro(p_livro_id INT)
 RETURNS DECIMAL(10,2)
+DETERMINISTIC
 BEGIN
     DECLARE preco_livro DECIMAL(10,2);
 
     SELECT preco INTO preco_livro
-    FROM livros
-    WHERE livro_id = livro_id;
+    FROM livro
+    WHERE id_livro = p_livro_id;
 
     RETURN preco_livro;
-END;
+END //
 
-# Recebe o ID da venda como parâmetro e retorna o total da venda (soma dos preços dos itens vendidos).
-CREATE FUNCTION calcular_total_venda(venda_id INT)
+DELIMITER ;
+
+-- FUNCTION CALCULAR TOTAL VENDA
+DELIMITER //
+
+CREATE FUNCTION calcular_total_venda(p_venda_id INT)
 RETURNS DECIMAL(10,2)
+DETERMINISTIC
 BEGIN
     DECLARE total_venda DECIMAL(10,2);
 
-    SELECT SUM(vendas_itens.preco_venda * vendas_itens.quantidade) INTO total_venda
-    FROM vendas_itens
-    WHERE venda_id = venda_id;
+    SELECT SUM(lv.preco * lv.quantidade) INTO total_venda
+    FROM livro_has_venda lv
+    WHERE lv.venda_id_venda = p_venda_id;
 
     RETURN total_venda;
-END;
+END //
 
-# Obtem a quantidade total de livros vendidos por autor
-CREATE FUNCTION obter_total_livros_vendidos_autor(autor_id INT)
+DELIMITER ;
+
+-- FUNCTION OBTER TOTAL LIVROS VENDIDOS POR AUTOR
+DELIMITER //
+
+CREATE FUNCTION obter_total_livros_vendidos_autor(p_autor_id INT)
 RETURNS INT
+DETERMINISTIC
 BEGIN
     DECLARE total_vendidos INT;
 
-    SELECT SUM(quantidade) INTO total_vendidos
-    FROM vendas_itens
-    INNER JOIN livros ON vendas_itens.livro_id = livro_id_livro
-    INNER JOIN autores ON livros.autor_id = autores_id_autores
-    WHERE autores.autor_id = autor_id;
+    SELECT SUM(lv.quantidade) INTO total_vendidos
+    FROM livro_has_venda lv
+    INNER JOIN livro l ON lv.livro_id_livro = l.id_livro
+    INNER JOIN livro_has_autores la ON l.id_livro = la.livro_id_livro
+    WHERE la.autores_id_autores = p_autor_id;
 
     RETURN total_vendidos;
-END;
+END //
+
+DELIMITER ;
 
 
-
+CALL obter_preco_livro(1);
+CALL calcular_total_venda(1);
+CALL obter_total_livros_vendidos_autor(1);
