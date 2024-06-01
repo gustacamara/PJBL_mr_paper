@@ -37,3 +37,44 @@ VALUES
 (4, '2024-04-01', 'Editora 4', 0),
 (5, '2024-04-01', 'Editora 5', 0),
 (6, '2024-04-01', 'Editora 6', 0);
+
+-- Tabela Categoria
+INSERT INTO `MrPaper`.`categoria` (`nome`, `classificacao_indicativa`)
+VALUES
+('Categoria 1', 10),
+('Categoria 2', 12),
+('Categoria 3', 14),
+('Categoria 4', 16),
+('Categoria 5', 18),
+('Categoria 6', 0);
+
+-- Tabela autores
+INSERT INTO `MrPaper`.`autores` (`nome`, `data_nascimento`, `biografia`)
+VALUES
+('Autor 1', '2024-04-01', 'Biografia 1'),
+('Autor 2', '2024-04-01', 'Biografia 2'),
+('Autor 3', '2024-04-01', 'Biografia 3'),
+('Autor 4', '2024-04-01', 'Biografia 4'),
+('Autor 5', '2024-04-01', 'Biografia 5'),
+('Autor 6', '2024-04-01', 'Biografia 6');
+
+
+-- Tabela metodo_pagamento
+INSERT INTO `MrPaper`.`metodo_pagamento` (`parcelas`, `tipo`)
+VALUES
+(12, 'Cartão de Credito'),
+(1, 'Cartão de Debito'),
+(1, 'Pix'),
+(1, 'Boleto'),
+(1, 'pagamento'),
+(1, 'pagamento');
+
+-- Tabela venda
+INSERT INTO `MrPaper`.`venda` (`data_emissao`, `metodo_pagamento_id_metodo_pagamento`, `cliente_id_cliente`)
+VALUES
+('2024-04-01', 1, 1),
+('2024-04-01', 2, 2),
+('2024-04-01', 3, 3),
+('2024-04-01', 4, 4),
+('2024-04-01', 5, 5),
+('2024-04-01', 6, 6)

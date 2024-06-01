@@ -62,9 +62,9 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `MrPaper`.`categoria` (
-  `id_categoria` INT(10) UNSIGNED NOT NULL,
+  `id_categoria` INT(10) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(50) NOT NULL,
-  `calssificacao_indicativa` TINYINT(18) UNSIGNED NOT NULL,
+  `classificacao_indicativa` TINYINT(18) NOT NULL,
   PRIMARY KEY (`id_categoria`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -82,7 +82,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `MrPaper`.`metodo_pagamento` (
   `id_metodo_pagamento` INT(11) NOT NULL AUTO_INCREMENT,
   `parcelas` TINYINT(2) UNSIGNED NOT NULL,
-  `tipo` VARCHAR(7) NOT NULL,
+  `tipo` VARCHAR(55) NOT NULL,
   PRIMARY KEY (`id_metodo_pagamento`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
@@ -145,6 +145,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `MrPaper`.`livro_has_editora` (
   `livro_id_livro` INT(11) NOT NULL,
   `editora_id_editora` INT(11) NOT NULL,
+  PRIMARY KEY (`livro_id_livro`, `editora_id_editora`),
   CONSTRAINT `fk_livro_has_editora_livro1`
     FOREIGN KEY (`livro_id_livro`)
     REFERENCES `MrPaper`.`livro` (`id_livro`)
@@ -160,7 +161,8 @@ DEFAULT CHARACTER SET = utf8;
 
 CREATE TABLE IF NOT EXISTS `MrPaper`.`livro_has_categoria` (
   `livro_id_livro` INT(11) NOT NULL,
-  `categoria_id_categoria` INT(10) UNSIGNED NOT NULL,
+  `categoria_id_categoria` INT(10) NOT NULL,
+  PRIMARY KEY (`livro_id_livro`, `categoria_id_categoria`),
   CONSTRAINT `fk_livro_has_categoria_livro1`
     FOREIGN KEY (`livro_id_livro`)
     REFERENCES `MrPaper`.`livro` (`id_livro`)
