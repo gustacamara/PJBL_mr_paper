@@ -192,3 +192,21 @@ END;
 //
 
 DELIMITER ;
+
+-- Trigger para atualizar a quantidade de exemplares vendidos pela editora relacionada ao livro
+
+DELIMITER //
+
+CREATE TRIGGER after_livro_update
+AFTER UPDATE ON livro
+FOR EACH ROW
+BEGIN
+    -- Atualizar a quantidade de exemplares vendidos pela editora relacionada ao livro
+    UPDATE editora e
+    JOIN livro_has_editora le ON e.id_editora = le.editora_id_editora
+    SET e.exemplares_vendidos = e.exemplares_vendidos - OLD.quantidade_vendida + NEW.quantidade_vendida
+    WHERE le.livro_id_livro = NEW.id_livro;
+END;
+//
+
+DELIMITER ;
