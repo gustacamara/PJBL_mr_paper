@@ -176,3 +176,19 @@ END;
 //
 
 DELIMITER ;
+
+-- Trigger para excluir todas as vendas associadas ao cliente excluído
+
+DELIMITER //
+
+CREATE TRIGGER after_cliente_delete
+AFTER DELETE ON cliente
+FOR EACH ROW
+BEGIN
+    -- Excluir todas as vendas associadas ao cliente excluído
+    DELETE FROM venda
+    WHERE cliente_id_cliente = OLD.id_cliente;
+END;
+//
+
+DELIMITER ;
