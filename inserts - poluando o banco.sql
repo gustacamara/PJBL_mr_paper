@@ -81,6 +81,46 @@ VALUES
 ('2024-04-01', 5, 5),
 ('2024-04-01', 6, 6)
 
+-- Tabela livro_has_venda
+INSERT INTO `MrPaper`.`livro_has_venda` (`livro_id_livro`, `venda_id_venda`, `quantidade`)
+VALUES
+(1, 1, 1),
+(2, 2, 2),
+(3, 3, 3),
+(4, 4, 4),
+(5, 5, 5),
+(6, 6, 6);
+
+-- Tabela livro_has_editora
+INSERT INTO `MrPaper`.`livro_has_editora` (`livro_id_livro`, `editora_id_editora`)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6);
+
+-- Tabela livro_has_categoria
+INSERT INTO `MrPaper`.`livro_has_categoria` (`livro_id_livro`, `categoria_id_categoria`)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6);
+
+-- Tabela livro_has_autores
+INSERT INTO `MrPaper`.`livro_has_autores` (`livro_id_livro`, `autores_id_autores`)
+VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5),
+(6, 6);
+
 -- UPDATE
 
 UPDATE `MrPaper`.`livro` SET
