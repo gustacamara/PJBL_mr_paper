@@ -82,14 +82,14 @@ VALUES
 ('2024-04-01', 6, 6)
 
 -- Tabela livro_has_venda
-INSERT INTO `MrPaper`.`livro_has_venda` (`livro_id_livro`, `venda_id_venda`, `quantidade`)
+INSERT INTO `MrPaper`.`livro_has_venda` (`livro_id_livro`, `venda_id_venda`, `quantidade`, `preco`)
 VALUES
-(1, 1, 1),
-(2, 2, 2),
-(3, 3, 3),
-(4, 4, 4),
-(5, 5, 5),
-(6, 6, 6);
+(1, 1, 1, 1),
+(2, 2, 2, 2),
+(3, 3, 3, 3),
+(4, 4, 4, 4),
+(5, 5, 5, 5),
+(6, 6, 6, 6);
 
 -- Tabela livro_has_editora
 INSERT INTO `MrPaper`.`livro_has_editora` (`livro_id_livro`, `editora_id_editora`)
