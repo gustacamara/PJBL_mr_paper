@@ -1,3 +1,5 @@
+-- INSERT
+
 -- Tabela livro
 INSERT INTO `MrPaper`.`livro` (`nome`, `preco`, `quantidade_estoque`, `quantidade_vendida`, `data`)
 VALUES
@@ -78,3 +80,78 @@ VALUES
 ('2024-04-01', 4, 4),
 ('2024-04-01', 5, 5),
 ('2024-04-01', 6, 6)
+
+-- UPDATE
+
+UPDATE `MrPaper`.`livro` SET
+    `nome` = 'Novo Livro 1',
+    `preco` = 15.00,
+    `quantidade_estoque` = 5,
+    `quantidade_vendida` = 2,
+    `data` = '2024-04-02'
+WHERE `id_livro` = 1;
+
+UPDATE `MrPaper`.`cliente` SET
+    `nome` = 'Novo Cliente 1',
+    `login` = 'novo_login1',
+    `senha` = 'nova_senha1',
+    `email` = 'novo_cliente1@example.com',
+    `quantidade_compra` = 1
+WHERE `id_cliente` = 1;
+
+
+UPDATE `MrPaper`.`avaliacao` SET
+    `estrelas` = 3,
+    `data` = '2024-04-02',
+    `avaliador` = 'Novo Avaliador 1',
+    `livro_id_livro` = 2,
+    `cliente_id_cliente` = 2
+WHERE `id_avaliacao` = 1;
+
+UPDATE `MrPaper`.`editora` SET
+    `nome` = 'Nova Editora 1',
+    `data` = '2024-04-02',
+    `exemplares vendidos` = 5
+WHERE `id_editora` = 1;
+
+UPDATE `MrPaper`.`autores` SET
+    `nome` = 'Novo Autor 1',
+    `data_nascimento` = '2024-04-02',
+    `biografia` = 'Nova Biografia 1'
+WHERE `id_autores` = 1;
+
+UPDATE `MrPaper`.`venda` SET
+    `data_emissao` = '2024-04-02',
+    `metodo_pagamento_id_metodo_pagamento` = 6,
+    `cliente_id_cliente` = 6
+WHERE `id_venda` = 1;
+
+-- DEELETE
+
+SET FOREIGN_KEY_CHECKS = 0; -- Desativar a verificação de chaves estrangeiras
+
+-- Excluir 5 registros da tabela livro
+DELETE FROM `mrpaper`.`livro` WHERE id_livro > 5;
+
+-- Excluir 5 registros da tabela cliente
+DELETE FROM `mrpaper`.`cliente` WHERE id_cliente > 5;
+
+-- Excluir 5 registros da tabela avaliacao
+DELETE FROM `mrpaper`.`avaliacao` WHERE id_avaliacao > 5;
+
+-- Excluir 5 registros da tabela editora
+DELETE FROM `mrpaper`.`editora` WHERE id_editora > 5;
+
+-- Excluir 5 registros da tabela categoria
+DELETE FROM `mrpaper`.`categoria` WHERE id_categoria > 5;
+
+-- Excluir 5 registros da tabela autores
+DELETE FROM `mrpaper`.`autores` WHERE id_autores > 5;
+
+-- Excluir 5 registros da tabela metodo_pagamento
+DELETE FROM `mrpaper`.`metodo_pagamento` WHERE id_metodo_pagamento > 5;
+
+-- Excluir 5 registros da tabela venda
+DELETE FROM `mrpaper`.`venda` WHERE id_venda > 5;
+
+SET FOREIGN_KEY_CHECKS = 1; -- Reativar a verificação de chaves estrangeiras
