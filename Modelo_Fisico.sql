@@ -11,8 +11,8 @@ CREATE TABLE IF NOT EXISTS `MrPaper`.`livro` (
     `id_livro` INT(11) NOT NULL AUTO_INCREMENT,
     `nome` VARCHAR(50) NOT NULL,
     `preco` FLOAT(10) UNSIGNED NOT NULL,
-    `quantidade_estoque` INT(10) UNSIGNED NOT NULL,
-    `quantidade_vendida` SMALLINT(5) UNSIGNED NOT NULL,
+    `quantidade_estoque` INT(10) UNSIGNED,
+    `quantidade_vendida` SMALLINT(5) UNSIGNED,
     `data` DATE NOT NULL,
     PRIMARY KEY (`id_livro`))
 ENGINE = InnoDB
