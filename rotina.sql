@@ -160,3 +160,19 @@ DELIMITER ;
 CALL obter_preco_livro(1);
 CALL calcular_total_venda(1);
 CALL obter_total_livros_vendidos_autor(1);
+
+-- Trigger para inseririr uma nova venda quando um cliente for inserido
+
+DELIMITER //
+
+CREATE TRIGGER after_cliente_insert
+AFTER INSERT ON cliente
+FOR EACH ROW
+BEGIN
+    -- Inserir uma nova venda quando um cliente é inserido
+    INSERT INTO venda (data_emissao, metodo_pagamento_id_metodo_pagamento, cliente_id_cliente)
+    VALUES (NOW(), 1, NEW.id_cliente);
+END;
+//
+
+DELIMITER ;
