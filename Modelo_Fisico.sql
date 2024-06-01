@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `MrPaper`.`cliente` (
   `nome` VARCHAR(50) NOT NULL,
   `login` VARCHAR(20) NOT NULL,
   `senha` VARCHAR(20) NOT NULL,
-  `cpf` INT(11) UNSIGNED NOT NULL,
+  `cpf` INT(15) NOT NULL,
   `email` VARCHAR(50) NOT NULL,
   `quantidade_compra` SMALLINT(6) NOT NULL,
   PRIMARY KEY (`id_cliente`))
