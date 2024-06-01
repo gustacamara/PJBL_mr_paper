@@ -95,3 +95,48 @@ DELIMITER ;
 CALL atualizar_vendas();
 CALL gerar_relatorio_vendas_por_data('2024-04-01');
 CALL atualizar_dados_cliente(1, 'Nome 1', 'Login 1', 'Senha 1', 'Email 1');
+
+# FUNCTIONS 
+# Recebe o ID do livro como parâmetro e retorna o preço do livro.
+CREATE FUNCTION obter_preco_livro(livro_id INT)
+RETURNS DECIMAL(10,2)
+BEGIN
+    DECLARE preco_livro DECIMAL(10,2);
+
+    SELECT preco INTO preco_livro
+    FROM livros
+    WHERE livro_id = livro_id;
+
+    RETURN preco_livro;
+END;
+
+# Recebe o ID da venda como parâmetro e retorna o total da venda (soma dos preços dos itens vendidos).
+CREATE FUNCTION calcular_total_venda(venda_id INT)
+RETURNS DECIMAL(10,2)
+BEGIN
+    DECLARE total_venda DECIMAL(10,2);
+
+    SELECT SUM(vendas_itens.preco_venda * vendas_itens.quantidade) INTO total_venda
+    FROM vendas_itens
+    WHERE venda_id = venda_id;
+
+    RETURN total_venda;
+END;
+
+# Obtem a quantidade total de livros vendidos por autor
+CREATE FUNCTION obter_total_livros_vendidos_autor(autor_id INT)
+RETURNS INT
+BEGIN
+    DECLARE total_vendidos INT;
+
+    SELECT SUM(quantidade) INTO total_vendidos
+    FROM vendas_itens
+    INNER JOIN livros ON vendas_itens.livro_id = livro_id_livro
+    INNER JOIN autores ON livros.autor_id = autores_id_autores
+    WHERE autores.autor_id = autor_id;
+
+    RETURN total_vendidos;
+END;
+
+
+
