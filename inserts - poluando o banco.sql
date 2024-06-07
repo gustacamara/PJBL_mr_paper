@@ -72,14 +72,14 @@ VALUES
 (1, 'pagamento');
 
 -- Tabela venda
-INSERT INTO `MrPaper`.`venda` (`data_emissao`, `metodo_pagamento_id_metodo_pagamento`, `cliente_id_cliente`)
+INSERT INTO `MrPaper`.`venda` (`data_emissao`, `metodo_pagamento_id_metodo_pagamento`,`quantidade_compra`, `cliente_id_cliente`)
 VALUES
-('2024-04-01', 1, 1),
-('2024-04-01', 2, 2),
-('2024-04-01', 3, 3),
-('2024-04-01', 4, 4),
-('2024-04-01', 5, 5),
-('2024-04-01', 6, 6);
+('2024-04-01', 1, 1, 1),
+('2024-04-01', 2, 2, 2),
+('2024-04-01', 3, 3, 3),
+('2024-04-01', 4, 4, 4),
+('2024-04-01', 5, 5, 5),
+('2024-04-01', 6, 6, 6);
 
 -- Tabela livro_has_venda
 INSERT INTO `MrPaper`.`livro_has_venda` (`livro_id_livro`, `venda_id_venda`, `quantidade`, `preco`)

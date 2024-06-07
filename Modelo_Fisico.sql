@@ -91,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `MrPaper`.`venda` (
   `id_venda` INT(11) NOT NULL AUTO_INCREMENT,
   `data_emissao` DATE NOT NULL,
   `metodo_pagamento_id_metodo_pagamento` INT(11) NOT NULL,
+  `quantidade_compra`  INT(11) NOT NULL,
   `cliente_id_cliente` INT(11) NOT NULL,
   PRIMARY KEY (`id_venda`),
   CONSTRAINT `fk_venda_metodo_pagamento1`
